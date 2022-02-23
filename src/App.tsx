@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 import { SearchOutlined } from '@material-ui/icons'
 import moment from 'moment'
@@ -6,7 +6,7 @@ import initialData from './data.json'
 import { Theme } from './theme'
 import { ReactComponent as Logo } from './assets/Logo.svg'
 import { Input, Checkbox, Table } from './components'
-import { useChecked, useColumns, useSearch } from './hooks'
+import { useColumns, useSearch } from './hooks'
 import { RowData } from './types';
 import { useArchived } from './hooks/use-archived';
 
@@ -169,7 +169,7 @@ const ArchiveButton = styled.span`
 
 function App() {
 
-  const [checked, handleOnCheckChange] = useChecked()
+  const [checked, handleOnCheckChange] = useState<boolean>(false);
 
   const [data, handleArchived] = useArchived(initialData);
 

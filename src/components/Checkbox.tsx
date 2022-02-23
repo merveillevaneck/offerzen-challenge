@@ -23,7 +23,6 @@ const InputBase = styled.input`
     }
 
     span::after {
-        content: "something";
         position: absolute;
         width: 25px;
         height: 45px;
