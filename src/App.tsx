@@ -249,7 +249,7 @@ function App() {
         </SearchContainer>
         <Page>
           <CountOuter>
-            <span>{data.length} interview requests</span>
+            <span>{rows.length} interview requests</span>
           </CountOuter>
             <Table
               columns={columns}
